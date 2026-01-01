@@ -1,5 +1,5 @@
 # Use an official Nginx image
-FROM nginx:alpine
+FROM nginx:latest
 
 # Copy your website files into the Nginx HTML directory
 COPY . /usr/share/nginx/html
@@ -8,4 +8,5 @@ COPY . /usr/share/nginx/html
 EXPOSE 80
 
 # Start Nginx server
+
 CMD ["nginx", "-g", "daemon off;"]
